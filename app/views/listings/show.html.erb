@@ -4,7 +4,9 @@
   <strong>Name:</strong>
   <%= @listing.name %>
 </p>
-
+<p>
+  <%= image_tag @listing.image.url(:medium) %>
+</p>
 <p>
   <strong>Description:</strong>
   <%= @listing.description %>
