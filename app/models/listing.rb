@@ -1,6 +1,6 @@
 class Listing < ActiveRecord::Base
   if Rails.env.development?
-    :image, :style => {:medium => "200x", :thumb => "100x100" }, :default_url => "default.jpg"
+    has_attached_file :image, :style => {:medium => "200x", :thumb => "100x100" }, :default_url => "default.jpg"
   else
     has_attached_file :image, :style => {:medium => "200x", :thumb => "100x100" }, :default_url => "default.jpg",
                     :storage => :dropbox,

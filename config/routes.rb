@@ -1,4 +1,5 @@
 PhoneSales::Application.routes.draw do
+  devise_for :users
   resources :listings
 
   get "pages/about"
