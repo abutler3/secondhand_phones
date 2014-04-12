@@ -7,7 +7,7 @@ class ListingsController < ApplicationController
 
   def seller
     @listings = Listing.where(user: current_user).order("created_at DESC")
-    // When you go to the seller url, only return current users listing
+    # When you go to the seller url, only return current users listing
   end
 
   def index

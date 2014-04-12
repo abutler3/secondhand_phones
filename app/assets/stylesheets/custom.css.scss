@@ -37,3 +37,22 @@ body {
   h5 { font-size: 35px;}
   p { font-size: 18px;}
 }
+
+.caption {
+  h3 {
+    font-size: 17px;
+    margin: 2px;
+  }
+  p {
+    font-size: 15px;
+    margin: 0px;
+  }
+}
+
+.jumbotron {
+  background-image: url('jumbotron.png');
+  h1, h2 {
+    color: white;
+    font-family: guardian-egyptt, georgia, serif;
+  }
+}
