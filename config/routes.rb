@@ -1,6 +1,11 @@
 PhoneSales::Application.routes.draw do
+  # resources :orders
+
   devise_for :users
-  resources :listings
+  resources :listings do
+    resources :orders
+  end
+  # Include listing id number in the url for our order pages
 
   get "pages/about"
   get "pages/contact"
