@@ -3,13 +3,17 @@ PhoneSales::Application.routes.draw do
 
   devise_for :users
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
   # Include listing id number in the url for our order pages
 
   get "pages/about"
   get "pages/contact"
   get 'seller' => "listings#seller"
+  get 'sales' => "orders#sales"
+  # Sets up url for /sales
+  get 'purchases' => "orders#purchases"
+  # Sets up url for /purchases
 
   root 'listings#index'
   # The priority is based upon order of creation: first created -> highest priority.
